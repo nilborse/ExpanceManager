@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+      #Register-form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f2f2f2;
+      }
+      #Register-form h1 {
+        text-align: center;
+        margin: 0 0 10px 0;
+      }
+      #Register-form input {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+      }
+      #Register-form input[type=submit] {
+        border: 0;
+        background: #4367c4;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="Register-form" onsubmit="return register()">
+      <h1>Register</h1>
+      <input type="text" placeholder="User Name" id="username" required/>
+      <input type="email" placeholder="Email Address" id="useremail" required/>
+      <input type="password" placeholder="Password" id="userpass" required/>
+      <input type="text" placeholder="User Address" id="useraddress" required/>
+      <input type="submit" value="Sign Up"/>
+    </form>
+  </body>
+</html>
+

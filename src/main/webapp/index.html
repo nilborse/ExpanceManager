@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <script>
+      function login(){
+        var data = new FormData();
+        data.append('email', document.getElementById("useremail").value);
+        data.append('password', document.getElementById("userpass").value);
+        var xhr = new XMLHttpRequest();
+        // @TODO - CHANGE "server-dummy.txt" TO YOUR SERVER SCRIPT
+        xhr.open('POST', "server-dummy.txt", true);
+        xhr.onload = function() {
+          if (xhr.status == 200) {
+            var response = JSON.parse(this.response);
+            // VALID
+            if (response.status) {
+              // @TODO - WHERE TO REDIRECT THE USER ON SIGN IN?
+              // location.href = "somewhere.html";
+            }
+            // INVALID EMAIL/PASSWORD
+            else {
+              alert(response.message);
+            }
+          } else {
+            alert("SERVER ERROR!");
+          }
+        };
+        xhr.send(data);
+        return false;
+      }
+    </script>
+ -->    <style>
+      #loginform {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f2f2f2;
+      }
+      #loginform h1 {
+        text-align: center;
+        margin: 0 0 10px 0;
+      }
+      #loginform input {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+      }
+      #loginform input[type=submit] {
+        border: 0;
+        background: #4367c4;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="loginform"  action="loginform">
+      <h1>LOGIN</h1>
+      <input type="email" placeholder="Email Address" id="useremail" required/>
+      <input type="password" placeholder="Password" id="userpass" required/>
+      <input type="submit" value="Sign In"/>
+      <a href="reg">New Registration...</a>
+    </form>
+  </body>
+</html>
+
